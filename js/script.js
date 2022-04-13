@@ -3,15 +3,16 @@
 //slider 1
 
 var slideIndex = 1;
-showSlider(slideIndex);
+
 
 window.addEventListener('resize', function (event) {
 	var width = window.innerWidth;
 	if (width > 756) {
 		hideSlider();
 	}
-	else {
+	else if (width <= 756) {
 		oneSlide();
+		showSlider(slideIndex);
 	}
 })
 
@@ -49,20 +50,21 @@ function hideSlider() {
 
 //slider 2
 var slideIndexT = 1;
-showSliderT(slideIndexT);
+
 
 window.addEventListener('resize', function (event) {
-	var width = window.innerWidth;
-	if (width > 1100) {
+	var widthT = window.innerWidth;
+	if (widthT > 1100) {
 		hideSliderT();
 	}
-	else {
+	else if (widthT <= 1100) {
 		oneSlideT();
+		showSliderT(slideIndexT);
 	}
 })
 
-function plusDivsT(n) {
-	showSliderT(slideIndexT += n);
+function plusDivsT(f) {
+	showSliderT(slideIndexT += f);
 }
 
 function oneSlideT() {
@@ -96,7 +98,6 @@ function hideSliderT() {
 
 
 const button = document.querySelector(".footer__image");
-
 
 if (button)
 	button.addEventListener('click', function (e) {

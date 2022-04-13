@@ -609,7 +609,7 @@ body{
 	}
 
 	&__cont {
-		width: 17.14rem;
+		z-index: 5;
 		display: flex;
 		flex-direction: column;
 		color:white;
@@ -662,9 +662,7 @@ body{
 .spanThree {
 	padding-bottom: 1rem;
 }
-.spanFour {
-	
-}
+
 
 
 input {
@@ -737,6 +735,8 @@ textarea{
 	}
 
 	&__image {
+		z-index: 99;
+		background: url('../img/scrooll.jpg') center no-repeat;
 		width: 70px;
 		height: 70px;
 		margin-left: 33.19%;
@@ -744,5 +744,11 @@ textarea{
 				margin-left: 0;
 		}
 				}
+}
+
+@media(max-width:756px){
+	html,body{
+		overflow-x: hidden;
+	}
 }
 

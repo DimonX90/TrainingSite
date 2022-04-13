@@ -928,7 +928,7 @@ body {
 }
 
 .contact__cont {
-  width: 17.14rem;
+  z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1115,6 +1115,8 @@ textarea {
 }
 
 .footer__image {
+  z-index: 99;
+  background: url("../img/scrooll.jpg") center no-repeat;
   width: 70px;
   height: 70px;
   margin-left: 33.19%;
@@ -1123,5 +1125,11 @@ textarea {
 @media (max-width: 1100px) {
   .footer__image {
     margin-left: 0;
+  }
+}
+
+@media (max-width: 756px) {
+  html, body {
+    overflow-x: hidden;
   }
 }
